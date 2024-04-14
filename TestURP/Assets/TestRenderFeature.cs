@@ -81,10 +81,12 @@ public class TestRenderFeature : ScriptableRendererFeature
             cmd.GetTemporaryRT(targetHandle.id, des);
             ConfigureTarget( targetHandle.Identifier(),renderingData.cameraData.renderer.cameraDepthTarget);
             ConfigureClear(ClearFlag.Color, Color.white);
+            // cmd.SetRenderTarget();
         }
 
         public override void Configure(CommandBuffer cmd, RenderTextureDescriptor cameraTextureDescriptor)
         {
+            var a = 1;
             // cameraTextureDescriptor.depthBufferBits = 0;
             // cameraTextureDescriptor.colorFormat = RenderTextureFormat.R8;
         }
